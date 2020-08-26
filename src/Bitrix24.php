@@ -89,6 +89,7 @@ class Bitrix24
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_URL => $queryUrl,
             CURLOPT_POSTFIELDS => $queryData,
+            CURLOPT_HTTPHEADER => array("Host: provayder.bitrix24.ru"),
         ));
         $result = curl_exec($curl);
         curl_close($curl);
